@@ -1,6 +1,6 @@
 # RHnode — Sistema de administración de empleados
-#Alejandro Estrada Montes de oca
-#Naybi Ocampo Arriaga
+# Alejandro Estrada Montes de oca
+# Naybi Ocampo Arriaga
 
 Proyecto final del Taller Especializado de Node.js (Express + JWT + MySQL en XAMPP).
 
