@@ -9,7 +9,7 @@ Proyecto final del Taller Especializado de Node.js (Express + JWT + MySQL en XAM
 3. En la terminal, dentro de la carpeta:
    ```bash
    npm install
-   npm run dev
+   npm start
    ```
 4. Abre http://localhost:3000 — usuario `admin@tallernode.mx`, contraseña `Admin123`.
 
