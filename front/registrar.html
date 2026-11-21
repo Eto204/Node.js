@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar empleado | HR Management</title>
+  <meta name="description" content="Sistema de administración de empleados de Taller de Node.js S.A. de C.V.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body data-section="empleados">
+  <div class="layout">
+    <!-- Sidebar y encabezado: se generan en js/layout.js -->
+    <aside class="sidebar" id="sidebar"></aside>
+    <div class="overlay"></div>
+
+    <div class="content">
+      <header class="header" id="header"></header>
+
+      <main class="main">
+        <div class="container narrow">
+          <div class="page-title">
+            <h1>Registrar empleado</h1>
+            <p>Ingresa la información del nuevo colaborador para agregarlo al sistema.</p>
+          </div>
+
+          <div class="panel form-card">
+            <form id="employee-form" data-mode="crear" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="nombre">Nombre <span class="required">*</span></label>
+                  <input class="input" type="text" id="nombre" name="nombre" placeholder="Ej. María">
+                  <span class="error-msg"></span>
+                </div>
+                <div class="field">
+                  <label for="apellidos">Apellidos <span class="required">*</span></label>
+                  <input class="input" type="text" id="apellidos" name="apellidos" placeholder="Ej. González López">
+                  <span class="error-msg"></span>
+                </div>
+                <div class="field">
+                  <label for="telefono">Teléfono <span class="required">*</span></label>
+                  <input class="input" type="tel" id="telefono" name="telefono" placeholder="Ej. 55 1234 5678">
+                  <span class="error-msg"></span>
+                </div>
+                <div class="field">
+                  <label for="correo">Correo electrónico <span class="required">*</span></label>
+                  <input class="input" type="email" id="correo" name="correo" placeholder="Ej. maria.gonzalez@empresa.com">
+                  <span class="error-msg"></span>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="direccion">Dirección <span class="required">*</span></label>
+                <textarea class="textarea" id="direccion" name="direccion" rows="4" placeholder="Calle, número, colonia, ciudad y estado"></textarea>
+                <span class="error-msg"></span>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="btn btn-outline" id="cancel">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Guardar empleado</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

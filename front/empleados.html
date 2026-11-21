@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administración de empleados | HR Management</title>
+  <meta name="description" content="Sistema de administración de empleados de Taller de Node.js S.A. de C.V.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body data-section="empleados">
+  <div class="layout">
+    <!-- Sidebar y encabezado: se generan en js/layout.js -->
+    <aside class="sidebar" id="sidebar"></aside>
+    <div class="overlay"></div>
+
+    <div class="content">
+      <header class="header" id="header"></header>
+
+      <main class="main">
+        <div class="container">
+          <div class="page-title">
+            <h1>Administración de empleados</h1>
+            <p>Consulta y administra la información de los colaboradores de tu empresa.</p>
+          </div>
+
+          <div class="panel">
+            <div class="toolbar">
+              <div class="search">
+                <i data-lucide="search"></i>
+                <input class="input" type="search" id="search" placeholder="Buscar empleado por nombre..." aria-label="Buscar empleado por nombre">
+              </div>
+              <a class="btn btn-primary" href="registrar.html"><i data-lucide="plus"></i> Agregar empleado</a>
+            </div>
+
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Teléfono</th>
+                    <th>Correo electrónico</th>
+                    <th class="actions">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="employees-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Confirmación de eliminación -->
+        <div class="modal-backdrop" id="delete-modal" role="dialog" aria-modal="true" aria-labelledby="delete-title">
+          <div class="modal">
+            <h3 id="delete-title">¿Estás seguro de que deseas eliminar este empleado?</h3>
+            <p>Se eliminará el registro de <strong id="delete-name"></strong>. Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+              <button type="button" class="btn btn-outline" id="cancel-delete">Cancelar</button>
+              <button type="button" class="btn btn-danger" id="confirm-delete">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/empleados.js"></script>
+</body>
+</html>

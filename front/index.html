@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión | HR Management</title>
+  <meta name="description" content="Sistema de administración de empleados de Taller de Node.js S.A. de C.V.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <div class="login">
+    <!-- Panel izquierdo -->
+    <section class="login-brand">
+      <div class="brand">
+        <span class="brand-icon"><i data-lucide="users"></i></span>
+        HR Management
+      </div>
+      <div>
+        <h1>Gestiona tu equipo con confianza.</h1>
+        <p>Sistema de administración de empleados.</p>
+      </div>
+      <span class="company">Taller de Node.js S.A. de C.V.</span>
+    </section>
+
+    <!-- Panel derecho -->
+    <section class="login-form-side">
+      <div class="login-box">
+        <div class="brand mobile">
+          <span class="brand-icon"><i data-lucide="users"></i></span>
+          HR Management
+        </div>
+
+        <h2>Bienvenido</h2>
+        <p class="subtitle">Ingresa tus credenciales para continuar.</p>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="email">Correo electrónico <span class="required">*</span></label>
+            <div class="input-icon">
+              <i data-lucide="mail"></i>
+              <input class="input" type="email" id="email" name="email" placeholder="admin@tallernode.mx" autocomplete="email">
+            </div>
+            <span class="error-msg"></span>
+          </div>
+
+          <div class="field">
+            <label for="password">Contraseña <span class="required">*</span></label>
+            <div class="input-icon with-toggle">
+              <i data-lucide="lock"></i>
+              <input class="input" type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password">
+              <button type="button" class="toggle-password" id="toggle-password" aria-label="Mostrar contraseña">
+                <i data-lucide="eye"></i>
+              </button>
+            </div>
+            <span class="error-msg"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
+        </form>
+
+        <p class="login-note"><i data-lucide="lock"></i> Acceso exclusivo para administradores autorizados.</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
