@@ -1,6 +1,6 @@
 window.onload = init;
 
-// Si abres el HTML con doble clic (file://) usa el servidor local
+
 var url = window.location.protocol === 'file:' ? 'http://localhost:3000' : '';
 
 function init() {

@@ -1,7 +1,6 @@
 // Código compartido por las páginas que requieren sesión
 // (empleados.html, registrar.html, editar.html)
 
-// Si abres el HTML con doble clic (file://) usa el servidor local
 var url = window.location.protocol === 'file:' ? 'http://localhost:3000' : '';
 
 var token = localStorage.getItem('token');
