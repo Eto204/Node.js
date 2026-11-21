@@ -1,76 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editar empleado | HR Management</title>
-  <meta name="description" content="Sistema de administración de empleados de Taller de Node.js S.A. de C.V.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/sesion.js"></script>
+    <script src="js/editar.js"></script>
+    <title>Editar empleado</title>
 </head>
-<body data-section="empleados">
-  <div class="layout">
-    <!-- Sidebar y encabezado: se generan en js/layout.js -->
-    <aside class="sidebar" id="sidebar"></aside>
-    <div class="overlay"></div>
 
-    <div class="content">
-      <header class="header" id="header"></header>
-
-      <main class="main">
-        <div class="container narrow">
-          <div class="page-title">
-            <h1>Editar empleado</h1>
-            <p>Modifica la información del colaborador seleccionado.</p>
-          </div>
-
-          <div class="panel form-card">
-            <form id="employee-form" data-mode="editar" novalidate>
-              <div class="form-grid">
-                <div class="field">
-                  <label for="nombre">Nombre <span class="required">*</span></label>
-                  <input class="input" type="text" id="nombre" name="nombre" placeholder="Ej. María">
-                  <span class="error-msg"></span>
-                </div>
-                <div class="field">
-                  <label for="apellidos">Apellidos <span class="required">*</span></label>
-                  <input class="input" type="text" id="apellidos" name="apellidos" placeholder="Ej. González López">
-                  <span class="error-msg"></span>
-                </div>
-                <div class="field">
-                  <label for="telefono">Teléfono <span class="required">*</span></label>
-                  <input class="input" type="tel" id="telefono" name="telefono" placeholder="Ej. 55 1234 5678">
-                  <span class="error-msg"></span>
-                </div>
-                <div class="field">
-                  <label for="correo">Correo electrónico <span class="required">*</span></label>
-                  <input class="input" type="email" id="correo" name="correo" placeholder="Ej. maria.gonzalez@empresa.com">
-                  <span class="error-msg"></span>
-                </div>
-              </div>
-
-              <div class="field">
-                <label for="direccion">Dirección <span class="required">*</span></label>
-                <textarea class="textarea" id="direccion" name="direccion" rows="4" placeholder="Calle, número, colonia, ciudad y estado"></textarea>
-                <span class="error-msg"></span>
-              </div>
-
-              <div class="form-actions">
-                <button type="button" class="btn btn-outline" id="cancel">Cancelar</button>
-                <button type="submit" class="btn btn-primary">Guardar cambios</button>
-              </div>
-            </form>
-          </div>
+<body>
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <span class="navbar-brand">Recursos Humanos</span>
+        <div>
+            <a class="btn btn-sm btn-outline-light" href="empleados.html">Empleados</a>
+            <a class="btn btn-sm btn-outline-light" href="registrar.html">Agregar</a>
         </div>
-      </main>
+        <div class="text-light">
+            <small id="user-mail"></small>
+            <button class="btn btn-sm btn-light ml-2" id="btn-logout">Cerrar sesión</button>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h3 class="mb-3">Editar empleado</h3>
+                <form id="employee-form">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="input-nombre">Nombre</label>
+                            <input type="text" class="form-control" id="input-nombre">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="input-apellidos">Apellidos</label>
+                            <input type="text" class="form-control" id="input-apellidos">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="input-telefono">Teléfono</label>
+                            <input type="tel" class="form-control" id="input-telefono">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="input-correo">Correo electrónico</label>
+                            <input type="email" class="form-control" id="input-correo">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-direccion">Dirección</label>
+                        <input type="text" class="form-control" id="input-direccion">
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <a class="btn btn-secondary" href="empleados.html">Cancelar</a>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <script src="js/data.js"></script>
-  <script src="js/layout.js"></script>
-  <script src="js/form.js"></script>
 </body>
+
 </html>
