@@ -1,0 +1,29 @@
+{
+  "name": "rhnode",
+  "version": "1.0.0",
+  "description": "Proyecto Recursos humanos",
+  "keywords": [
+    "api",
+    "rest",
+    "express",
+    "node.js"
+  ],
+  "homepage": "https://github.com/Eto204/Node.js#readme",
+  "bugs": {
+    "url": "https://github.com/Eto204/Node.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eto204/Node.js.git"
+  },
+  "license": "ISC",
+  "author": "Naybi and Alejandro",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
